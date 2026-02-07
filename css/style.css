@@ -167,8 +167,8 @@ header img {
 .holographic-card::before {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -50%;
+  top: -100%;
+  left: -100%;
   width: 200%;
   height: 200%;
   background: linear-gradient(
@@ -189,14 +189,19 @@ header img {
 
 .holographic-card:hover::before {
   opacity: 1;
-  transform: rotate(-45deg) translateY(100%);
+  transform: rotate(-45deg) translateY(275%);
 }
 
 .address {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-family: 'Trebuchet MS';
   padding: 0 50px 0 50px;
+}
+
+.address p {
+  font-family: 'Trebuchet MS';
+  padding: 0 5px 0 5px;
 }
 
 .tagline {
@@ -206,7 +211,7 @@ header img {
 
 /************* Sections ********************/
 hr {
-  height: 5px;
+  height: 10px;
   background-color: rgb(29, 82, 46);
   margin: 0;
 }
@@ -229,6 +234,7 @@ section dl {
 .two-blocks {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 0 5% 0 5%;
 }
 
 .blocks {
@@ -261,8 +267,9 @@ section dl {
 
 .blocks ul {
   list-style: none;
+  font-family: 'Trebuchet MS';
   margin: 0px;
-  padding: 0px 0px 20px 0px;
+  padding: 0px 0px 30px 0px;
 }
 
 .blocks li{
@@ -288,6 +295,7 @@ section dl {
 .blocks li:first-child { border-left: 10px solid #3498db; }
 .blocks li:nth-child(2) { border-left: 10px solid #ffd071; }
 .blocks li:nth-child(3) { border-left: 10px solid #f0776c; }
+.blocks li:nth-child(4) { border-left: 10px solid #e96cf0; }
 .blocks li:last-child { border-left: 10px solid #1abc9c; }
 
 .blocks li:after { 
@@ -306,12 +314,8 @@ section dl {
 .blocks li:first-child:after{ background: #3498db; }
 .blocks li:nth-child(2):after{ background: #ffd071; }
 .blocks li:nth-child(3):after{ background: #f0776c; }
+.blocks li:nth-child(4):after{ background: #e96cf0; }
 .blocks li:last-child:after{ background: #1abc9c; }
-
-section ul {
-  list-style-type: circle;
-  font-family: 'Trebuchet MS';
-}
 
 section a {
   text-decoration: none;
@@ -367,6 +371,16 @@ section a:hover {
     padding-top: 10px;
     }
 
+    .address {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0 0 0;
+    }
+
+    .address p {
+      margin: 5px 0;
+    }
+
     .two-blocks {
     grid-template-columns: 1fr;
     }
@@ -390,12 +404,59 @@ section a:hover {
   display: grid;
   grid-template-columns: 1fr;
   padding: 20px;
+  margin: 20px auto;
 }
 
 input {
   margin: 10px;
+  margin-bottom: 30px;
 }
 
 textarea {
-    width: 95%;
+  width: 95%;
+  resize: none;
+}
+
+label {
+  margin: 0 0 0 10px;
+  font-family: 'Trebuchet MS';
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(18, 51, 118);
+}
+
+input,textarea {
+  display: block;
+  margin: 5px 0 30px 10px;
+  font-family: 'Trebuchet MS';
+  font-size: 25px;
+  border: 2px solid rgba(0,0,0,.1);
+  border-radius: 10px;
+  background: #f0f0f0;
+  padding-left: 5px;
+  outline: none;
+}
+  
+button {
+  display: block;
+  margin: 0 auto;
+  line-height: 30px;
+  padding: 0 20px;
+  border: none;
+  background: rgb(46, 133, 74);
+  color: white;
+  letter-spacing: 4px;
+  transition: .2s all ease-in-out;
+  border-bottom: 2px solid transparent;
+  outline: none;
+  font-family: 'Trebuchet MS';
+  font-size: 20px;
+  width: 25%;
+  height: 75px;
+}
+  
+button:hover {
+  background: inherit;
+  color: rgb(46, 133, 74);
+  border-bottom: 10px solid rgb(46, 133, 74);
 }

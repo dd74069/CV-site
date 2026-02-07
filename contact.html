@@ -14,19 +14,24 @@
     </nav>
     <header class="con-header">
         <h1 class="hover-underline">Dante Dunham</h1>
-        <p class="address">868 Ivy Ridge Drive, Loganville, GA 30052 &mdash; (678) 308-5331 &mdash; dd74069@uga.edu</p>
+        <div class="address">
+            <p><i class="fas fa-map-pin"></i>868 Ivy Ridge Drive, Loganville, GA 30052</p>
+            <p><i class="fas fa-phone"></i>(678) 308-5331</p>
+            <p><i class="fas fa-envelope"></i>dd74069@uga.edu</p>
+        </div>
     </header>
     <hr>
-    <section class="one-col">
+    <section class="one-col blocks">
         <form method="post" action="https://formsubmit.co/4a882804d3252a5fcda593e10dfca156">
-            
-            <label>Name:</label>
-            <input type="text" id="Name" name="name" placeholder="Full Name" required><br>
-            <label>Email:</label>
-            <input type="email" id="Email" name="email" placeholder="Email Address" required><br>
-            <label>Message:</label>
-            <textarea name="message" placeholder="Your Message"></textarea><br>
-            <button type="submit">Send</button>
+            <label>Name:*</label>
+            <input type="text" id="Name" name="name" placeholder="Full Name" required>
+            <label>Email:*</label>
+            <input type="email" id="Email" name="email" placeholder="Email Address" required>
+            <label>Phone:</label>
+            <input type="tel" id="Phone" name="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+            <label>Message:*</label>
+            <textarea name="message" placeholder="Amazing Website!" required></textarea><br>
+            <button type="submit">SEND</button>
         </form>
     </section>
     <footer>
