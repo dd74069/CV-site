@@ -17,14 +17,16 @@ nav {
 
 nav p {
   color: rgb(255, 255, 255);
+  display: flex;          
+  align-items: center;            
 }
 
-nav a {
+.nav-a {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
 
-nav a:hover {
+.nav-a:hover {
   text-decoration: underline;
   color: rgb(18, 51, 118);
 }
@@ -53,7 +55,7 @@ footer a.like-nav:hover {
   color: rgb(18, 51, 118);
 }
 
-footer a.spin {
+footer a.spin, nav a.spin {
   width: 40px;
   height: 40px;
   background-color: #fff;
@@ -69,19 +71,19 @@ footer a.spin {
   z-index: 1;
 }
 
-footer a.spin .icon {
+footer a.spin .icon, nav a.spin .icon {
   position: relative;
   color: #262626;
   transition: .5s;
   z-index: 3;
 }
 
-footer a.spin:hover .icon {
+footer a.spin:hover .icon, nav a.spin:hover .icon {
   color: #fff;
   transform: rotateY(360deg);
 }
 
-footer a.spin:before {
+footer a.spin:before, nav a.spin:before {
   content: "";
   position: absolute;
   top: 100%;
@@ -93,11 +95,11 @@ footer a.spin:before {
   z-index: 2;
 }
 
-footer a.spin:hover:before {
+footer a.spin:hover:before, nav a.spin:hover:before {
   top: 0;
 }
 
-footer a.spin:before {
+footer a.spin:before, nav a.spin:before {
   background: #0077b5;
 }
 
@@ -296,7 +298,7 @@ section dl {
   list-style: none;
   font-family: 'Trebuchet MS';
   margin: 0px;
-  padding: 0px 0px 30px 0px;
+  padding: 0px 0px 20px 0px;
 }
 
 .skills-section ul {
@@ -401,7 +403,7 @@ section a:hover {
       padding: 10px 0 0 20px;
     }
 
-    nav a {
+    .nav-a{
     display: block;
     width: 95%;
     border-top: 1px solid white;
